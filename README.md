@@ -5,7 +5,7 @@ Zebonastic.ai Magazine Resources
 * [https://zebonastic.com](https://zebonastic.com)      
 
 
-Scripts from the magazine are in the PYG directory.
+Scripts from the magazine are in the PYZ directory.
 
 <img src="https://raw.githubusercontent.com/aiskunks/zebonastic/main/IMG/Small_Zebo_Mag.png">
 
