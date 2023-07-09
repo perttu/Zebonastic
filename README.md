@@ -11,5 +11,9 @@ Scripts from the magazine are in the PYZ directory.
 
 
 
+<img src="https://raw.githubusercontent.com/aiskunks/zebonastic/main/IMG/Anatomy_of_Prompts_Zebonastic.png">
+
+
+
 
 
