@@ -44,7 +44,7 @@ Organize your tagset within the appropriate GitHub directory. For instance, if y
 
 Conduct prompt engineering experiments for your topic and document the results in a Jupyter notebook. Treat the notebook as a journal to record your experiments, including images with well-crafted prompts for your topic.
 
-Ensure that all images are placed in the "Images" subdirectory and are renamed using the alpha_numeric_opt.py script before uploading them to GitHub.
+Ensure that all images are placed in the "Images" subdirectory and are renamed using the alpha_numeric_opt.py script before uploading them to GitHub. See [https://github.com/aiskunks/zebonastic/tree/main/PYZ](https://github.com/aiskunks/zebonastic/tree/main/PYZ)  
 
 Rewrite the contents of the README.md files in a way that is relevant and coherent to your chosen topic.
       
