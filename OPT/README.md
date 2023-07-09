@@ -10,10 +10,11 @@ The goal is to conduct useful research on creating prompts for specific kinds of
 
 Think of a prompt as a sequence of tags and categorize all the tags into four meta-categories:
 
-Subject
-Style
-Composition
-Boosters
+1) Subject  
+2) Style  
+3) Composition   
+4) Boosters  
+
 Refer to the image below for an illustration of the prompt structure:
 
 <img src="https://raw.githubusercontent.com/aiskunks/zebonastic/main/IMG/Anatomy_of_Prompts_Zebonastic.png">
