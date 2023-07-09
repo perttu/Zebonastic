@@ -39,7 +39,7 @@ _Please upvote any datasets that you find useful._
 
 Organize your tagset within the appropriate GitHub directory. For instance, if your topic is Game Art, place the tags in the "Tags" folder within the "Game_art" subdirectory.
 
-## Step 2 - Prompt Engineering Experiments
+## Step 3 - Prompt Engineering Experiments
 
 Conduct prompt engineering experiments for your topic and document the results in a Jupyter notebook. Treat the notebook as a journal to record your experiments, including images with well-crafted prompts for your topic.
 
