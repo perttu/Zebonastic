@@ -1,0 +1,188 @@
+import random
+import csv
+import os
+from google.colab import files
+
+deitynames = [
+    "Aetheria",
+    "Seraphis",
+    "Gaiastra",
+    "Pyronus",
+    "Aquaria",
+    "Chronosia",
+    "Anima",
+    "Harmonia",
+    "Phalanx",
+    "Solara",
+    "Aria",
+    "Zephyrus",
+    "Nyx",
+    "Iris",
+    "Thalassa",
+    "Eos",
+    "Hemera",
+    "Lyra",
+    "Astraeus",
+    "Selene"
+]
+
+colors = [
+    "Luminescent Pearl",
+    "Celestial Azure",
+    "Ethereal Lavender",
+    "Translucent Rose",
+    "Misty Silver",
+    "Opalescent Opal",
+    "Seraphic Gold",
+    "Enchanted Amethyst",
+    "Radiant Turquoise",
+    "Dreamy Periwinkle",
+    "Whispering Lilac",
+    "Gossamer Green",
+    "Spectral Aqua",
+    "Ethereal Peach",
+    "Iridescent Coral",
+    "Dewdrop Blue",
+    "Mystic Mauve",
+    "Heavenly Indigo",
+    "Serenity Pink",
+    "Halo White"
+]
+
+
+animal = [
+    "Dove",
+    "Phoenix",
+    "Deer",
+    "Dragon",
+    "Dolphin",
+    "Owl",
+    "Butterfly",
+    "Peacock",
+    "Lion",
+    "Hawk",
+    "Swan",
+    "Panther",
+    "Fish",
+    "Rooster",
+    "Horse",
+    "Lyrebird",
+    "Bat",
+    "Wolf"
+]
+
+object_associations = [
+    "Star",
+    "Feather",
+    "Tree",
+    "Flame",
+    "Seashell",
+    "Hourglass",
+    "Palette",
+    "Harmonious Symbol",
+    "Shield",
+    "Sun",
+    "Lyre",
+    "Wind Chime",
+    "Moon",
+    "Rainbow",
+    "Wave",
+    "Morning Star",
+    "Daybreak",
+    "Constellation",
+    "Nebula",
+    "Crescent Moon",
+    "Scepter",
+    "Lotus Flower",
+    "Sword",
+    "Globe",
+    "Vortex",
+    "Goblet",
+    "Wings",
+    "Crystal",
+    "Amulet",
+    "Trident",
+    "Staff",
+    "Scroll",
+    "Anchor",
+    "Key",
+    "Mirror",
+    "Bouquet",
+    "Thunderbolt",
+    "Mask",
+    "Scales",
+    "Arrow",
+    "Crown",
+    "Book",
+    "Wheel",
+    "Labyrinth"
+]
+
+
+abstract_elements = [
+    "Spiral",
+    "Fractal",
+    "Geometric Polygon",
+    "Organic Flow",
+    "Color Burst",
+    "Swirling Vortex",
+    "Mosaic Patchwork",
+    "Rainbow Gradient",
+    "Translucent Layers",
+    "Dancing Curves",
+    "Energetic Zigzag",
+    "Expanding Ripples",
+    "Whirling Dervish",
+    "Harmonious Chaos",
+    "Abstract Symmetry",
+    "Vibrant Kaleidoscope",
+    "Fluid Motion",
+    "Dynamic Interplay",
+    "Intricate Lattice",
+    "Transcendent Prism",
+    "Bold Brushstrokes",
+    "Shimmering Opacity",
+    "Whimsical Tangles",
+    "Radiant Abstraction",
+    "Interlocking Forms",
+    "Rhythmic Pulsations",
+    "Electrifying Swirls",
+    "Luminous Whorls",
+    "Transcending Boundaries",
+    "Expressive Gestures",
+    "Enigmatic Patterns",
+    "Chromatic Symphony",
+    "Mesmerizing Resonance",
+    "Unbounded Imagination",
+    "Serene Chaos",
+    "Harmonious Disarray",
+    "Ethereal Eruption",
+    "Hypnotic Vibrations",
+    "Enchanting Flux",
+    "Emerging Embellishments",
+    "Fusion of Color",
+    "Dreamlike Fusion",
+    "Surreal Metamorphosis"
+]
+
+
+# Generate random prompts
+num_prompts = 50
+prompts = []
+
+for _ in range(num_prompts):
+    deity_names = random.choice(deitynames)
+    ethereal_colors = random.choice(colors)
+    animal_names = random.choice(animal)
+    object_association = random.choice(object_associations)
+    abstract_element = random.choice(abstract_elements)
+    prompt = f"Ps2 Illustrate a picture of {deity_names} with {animal_names} in a {object_association} in the form of {abstract_element}."
+    prompts.append(prompt)
+    print(prompt)
+
+# Open a new file for writing
+with open('File2.csv', 'w') as file:
+    for prompt in prompts:
+        file.write(prompt + '\n')
+# Download the file
+files.download('File2.csv')
