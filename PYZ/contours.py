@@ -12,24 +12,29 @@ if not os.path.exists("contours"):
     os.mkdir("contours")
 
 def detect_image_type(image_path):
-    img = cv2.imread(image_path)
-    if img is None:
+    try:
+        img = cv2.imread(image_path)
+        if img is None:
+            if print_output:
+                print(f"Error: Failed to read {image_path}")
+            return
+        gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
+        blur = cv2.GaussianBlur(gray, (5, 5), 0)
+        edges = cv2.Canny(blur, 50, 200)
+        contours, hierarchy = cv2.findContours(edges, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
         if print_output:
-            print(f"Error: Failed to read {image_path}")
-        return
-    gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
-    blur = cv2.GaussianBlur(gray, (5, 5), 0)
-    edges = cv2.Canny(blur, 50, 200)
-    contours, hierarchy = cv2.findContours(edges, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
-    if print_output:
-        print(f"{image_path} has {len(contours)} contours.")
-    if len(contours) > n:
-        shutil.move(image_path, os.path.join("contours", os.path.basename(image_path)))
+            print(f"{image_path} has {len(contours)} contours.")
+        if len(contours) > n:
+            shutil.move(image_path, os.path.join("contours", os.path.basename(image_path)))
+    except cv2.error as e:
+        if print_output:
+            print(f"Error processing {image_path}: {str(e)}")
 
 for filename in os.listdir("."):
     if filename.endswith(".jpg") or filename.endswith(".png"):
         image_path = os.path.join(".", filename)
         detect_image_type(image_path)
+
         
         
 '''
